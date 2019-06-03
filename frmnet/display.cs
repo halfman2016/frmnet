@@ -29,7 +29,7 @@ namespace frmnet
 
         private void Display_Load(object sender, EventArgs e)
         {
-            
+            distxt.Size = this.ClientSize;
             // distxt.Lines.Append();
             if (maintxt != "")
             { distxt.Text = maintxt; }
@@ -66,8 +66,7 @@ namespace frmnet
         {
            // distxt.Focus();
            
-            distxt.Select(distxt.TextLength - 30, distxt.TextLength);
-            Size s=distxt.ClientSize;
+            
           
             
         }

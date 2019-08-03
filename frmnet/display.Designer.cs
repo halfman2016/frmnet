@@ -29,44 +29,45 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.distxt = new System.Windows.Forms.RichTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
-            // 
-            // distxt
-            // 
-            this.distxt.Location = new System.Drawing.Point(0, 34);
-            this.distxt.Margin = new System.Windows.Forms.Padding(0);
-            this.distxt.Name = "distxt";
-            this.distxt.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.distxt.Size = new System.Drawing.Size(791, 348);
-            this.distxt.TabIndex = 0;
-            this.distxt.Text = "";
             // 
             // timer1
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(-1, -2);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
+            this.richTextBox1.Size = new System.Drawing.Size(887, 716);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "";
+            // 
             // display
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.distxt);
+            this.ClientSize = new System.Drawing.Size(884, 711);
+            this.Controls.Add(this.richTextBox1);
+            this.MaximizeBox = false;
             this.Name = "display";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "display";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Display_FormClosed);
             this.Load += new System.EventHandler(this.Display_Load);
-            this.ClientSizeChanged += new System.EventHandler(this.Display_ClientSizeChanged);
+            this.Shown += new System.EventHandler(this.Display_Shown);
+            this.ResizeEnd += new System.EventHandler(this.Display_ResizeEnd);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Display_Paint);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.RichTextBox distxt;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

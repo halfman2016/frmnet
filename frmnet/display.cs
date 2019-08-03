@@ -31,7 +31,7 @@ namespace frmnet
 
         private void Display_Load(object sender, EventArgs e)
         {
-           
+            this.Text = Program.flieseled + Program.readfontsize + Program.readbite + Program.readmode;
             font = new Font("Arial", Program.readfontsize);
             string text = System.IO.File.ReadAllText(Program.flieseled, System.Text.Encoding.Default);
             string temp="";
@@ -123,7 +123,15 @@ namespace frmnet
                     break;
                 case 20:
 
-                    richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(step), linewidth*2);
+                    
+                        if (step + 1 <= totaline)
+                        {
+                            richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(step), (richTextBox1.GetFirstCharIndexFromLine(step + 1) + linewidth) - richTextBox1.GetFirstCharIndexFromLine(step));
+                        }
+                        else
+                        {
+                            richTextBox1.Select(richTextBox1.GetFirstCharIndexFromLine(step), linewidth*2);
+                        }
                     step = step + 2;
                      break;
                 

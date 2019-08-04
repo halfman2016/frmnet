@@ -48,6 +48,15 @@
             this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.radioButton11 = new System.Windows.Forms.RadioButton();
             this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.sampletxt = new System.Windows.Forms.RichTextBox();
+            this.btnbackcol = new System.Windows.Forms.Button();
+            this.btnforecol = new System.Windows.Forms.Button();
+            this.btnselback = new System.Windows.Forms.Button();
+            this.btnselfore = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -274,11 +283,120 @@
             this.radioButton12.UseVisualStyleBackColor = true;
             this.radioButton12.CheckedChanged += new System.EventHandler(this.RadioButton12_CheckedChanged);
             // 
+            // sampletxt
+            // 
+            this.sampletxt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.sampletxt.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.sampletxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sampletxt.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.sampletxt.Location = new System.Drawing.Point(33, 326);
+            this.sampletxt.Multiline = false;
+            this.sampletxt.Name = "sampletxt";
+            this.sampletxt.ReadOnly = true;
+            this.sampletxt.Size = new System.Drawing.Size(338, 87);
+            this.sampletxt.TabIndex = 0;
+            this.sampletxt.TabStop = false;
+            this.sampletxt.Text = "文字样例预览";
+            // 
+            // btnbackcol
+            // 
+            this.btnbackcol.BackColor = System.Drawing.Color.White;
+            this.btnbackcol.FlatAppearance.BorderSize = 0;
+            this.btnbackcol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbackcol.Location = new System.Drawing.Point(390, 330);
+            this.btnbackcol.Name = "btnbackcol";
+            this.btnbackcol.Size = new System.Drawing.Size(26, 26);
+            this.btnbackcol.TabIndex = 7;
+            this.btnbackcol.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnbackcol.UseVisualStyleBackColor = false;
+            // 
+            // btnforecol
+            // 
+            this.btnforecol.BackColor = System.Drawing.Color.Black;
+            this.btnforecol.FlatAppearance.BorderSize = 0;
+            this.btnforecol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnforecol.Location = new System.Drawing.Point(433, 330);
+            this.btnforecol.Name = "btnforecol";
+            this.btnforecol.Size = new System.Drawing.Size(26, 26);
+            this.btnforecol.TabIndex = 8;
+            this.btnforecol.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnforecol.UseVisualStyleBackColor = false;
+            // 
+            // btnselback
+            // 
+            this.btnselback.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnselback.FlatAppearance.BorderSize = 0;
+            this.btnselback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnselback.Location = new System.Drawing.Point(390, 374);
+            this.btnselback.Name = "btnselback";
+            this.btnselback.Size = new System.Drawing.Size(26, 26);
+            this.btnselback.TabIndex = 9;
+            this.btnselback.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnselback.UseVisualStyleBackColor = false;
+            // 
+            // btnselfore
+            // 
+            this.btnselfore.BackColor = System.Drawing.SystemColors.ControlText;
+            this.btnselfore.FlatAppearance.BorderSize = 0;
+            this.btnselfore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnselfore.Location = new System.Drawing.Point(434, 374);
+            this.btnselfore.Name = "btnselfore";
+            this.btnselfore.Size = new System.Drawing.Size(26, 26);
+            this.btnselfore.TabIndex = 10;
+            this.btnselfore.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnselfore.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(388, 359);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 12);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "背景";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(432, 359);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(29, 12);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "前景";
+            this.label3.Click += new System.EventHandler(this.Label3_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(377, 403);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 12);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "突出背景";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(431, 403);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 12);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "突出前景";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnselfore);
+            this.Controls.Add(this.btnselback);
+            this.Controls.Add(this.btnforecol);
+            this.Controls.Add(this.btnbackcol);
+            this.Controls.Add(this.sampletxt);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -325,6 +443,15 @@
         private System.Windows.Forms.RadioButton radioButton10;
         private System.Windows.Forms.RadioButton radioButton11;
         private System.Windows.Forms.RadioButton radioButton12;
+        private System.Windows.Forms.RichTextBox sampletxt;
+        private System.Windows.Forms.Button btnbackcol;
+        private System.Windows.Forms.Button btnforecol;
+        private System.Windows.Forms.Button btnselback;
+        private System.Windows.Forms.Button btnselfore;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 

@@ -69,8 +69,9 @@ namespace frmnet
             if (radioButton11.Checked == true) Program.readfontsize = 15;
             if (radioButton12.Checked == true) Program.readfontsize = 10;
             Settings.Default.readfontsize = Program.readfontsize;
-            Settings.Default.Save();
 
+            Settings.Default.Save();
+            sampletxt.Font = new System.Drawing.Font("Arial", Program.readfontsize);
         }
 
         private void RadioButton8_CheckedChanged(object sender, EventArgs e)
@@ -106,6 +107,14 @@ namespace frmnet
             Program.readfontsize = Settings.Default.readfontsize;
             Program.readbite = Settings.Default.readbite;
             Program.flieseled = Settings.Default.selfilename;
+
+            Program.forcecolor = Settings.Default.forecolor;
+            Program.backcolor = Settings.Default.backcolor;
+            Program.selbackcolor = Settings.Default.selbackcolor;
+            Program.selforcecolor = Settings.Default.selforecolor;
+
+
+
             //display set
 
             if (Program.readfontsize * Program.readmode * Program.readbite != 0)
@@ -163,10 +172,30 @@ namespace frmnet
                 fileseled.Text = Program.flieseled;
             }
 
+            //样例赋值
+
             
+
+            
+           
             }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+
+            sampletxt.ForeColor = Program.forcecolor;
+            sampletxt.BackColor = Program.backcolor;
+            sampletxt.SelectionColor = Program.selforcecolor;
+            sampletxt.SelectionBackColor = Program.selbackcolor;
+
+            btnbackcol.BackColor = Program.backcolor;
+            btnforecol.BackColor = Program.forcecolor;
+            btnselfore.BackColor = Program.selforcecolor;
+            btnselback.BackColor = Program.selbackcolor;
+            sampletxt.Select(2, 4);
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
         {
 
         }

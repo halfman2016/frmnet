@@ -25,7 +25,7 @@ namespace banma.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("White")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Red")]
         public global::System.Drawing.Color forecolor {
             get {
                 return ((global::System.Drawing.Color)(this["forecolor"]));
@@ -37,7 +37,7 @@ namespace banma.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Black")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Gainsboro")]
         public global::System.Drawing.Color backcolor {
             get {
                 return ((global::System.Drawing.Color)(this["backcolor"]));
@@ -61,7 +61,7 @@ namespace banma.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("192, 192, 255")]
+        [global::System.Configuration.DefaultSettingValueAttribute("128, 128, 255")]
         public global::System.Drawing.Color selbackcolor {
             get {
                 return ((global::System.Drawing.Color)(this["selbackcolor"]));

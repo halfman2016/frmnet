@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace frmnet
@@ -17,6 +14,13 @@ namespace frmnet
         public static int readmode=10;
         public static int readfontsize=15;
         public static string flieseled;
+        public static System.Drawing.Color forcecolor;
+        public static System.Drawing.Color backcolor;
+        public static System.Drawing.Color selforcecolor;
+        public static System.Drawing.Color selbackcolor;
+
+
+
 
         [STAThread]
 

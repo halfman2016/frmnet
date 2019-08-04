@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using banma.Properties;
+using System;
+
 using System.Windows.Forms;
 
 namespace frmnet
@@ -23,7 +17,7 @@ namespace frmnet
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            if (Program.flieseled == null)
+            if (Program.flieseled.Length==0)
             {
                 MessageBox.Show(this, "请选取文本文件（ANSI格式）", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -45,7 +39,8 @@ namespace frmnet
                    
                     fileseled.Text = openFileDialog.FileName;
                     Program.flieseled = openFileDialog.FileName;
-                  
+                    Settings.Default.selfilename = Program.flieseled;
+                    Settings.Default.Save();
                 }
             }
         }
@@ -73,6 +68,8 @@ namespace frmnet
             if (radioButton10.Checked == true) Program.readfontsize = 25;
             if (radioButton11.Checked == true) Program.readfontsize = 15;
             if (radioButton12.Checked == true) Program.readfontsize = 10;
+            Settings.Default.readfontsize = Program.readfontsize;
+            Settings.Default.Save();
 
         }
 
@@ -84,7 +81,8 @@ namespace frmnet
             if (radioButton7.Checked == true) Program.readbite = 666;
             if (radioButton6.Checked == true) Program.readbite = 500;
             if (radioButton5.Checked == true) Program.readbite = 333;
-
+            Settings.Default.readbite = Program.readbite;
+            Settings.Default.Save();
         }
 
         private void RadioButton1_CheckedChanged(object sender, EventArgs e)
@@ -95,12 +93,21 @@ namespace frmnet
             if (radioButton2.Checked == true) Program.readmode = 5;
             if (radioButton3.Checked == true) Program.readmode = 10;
             if (radioButton4.Checked == true) Program.readmode = 20;
+            Settings.Default.readmode = Program.readmode;
+            Settings.Default.Save();
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             //Program.flieseled = "C:\\Users\\jiang\\Documents\\tteeansi.txt";
+            //read set
+            Program.readmode = Settings.Default.readmode;
+            Program.readfontsize = Settings.Default.readfontsize;
+            Program.readbite = Settings.Default.readbite;
+            Program.flieseled = Settings.Default.selfilename;
+            //display set
+
             if (Program.readfontsize * Program.readmode * Program.readbite != 0)
             {
                 switch (Program.readbite)

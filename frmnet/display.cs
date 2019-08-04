@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Drawing;
-using System.Drawing.Drawing2D;
+
 using System.Windows.Forms;
 
 namespace frmnet
@@ -10,6 +10,7 @@ namespace frmnet
         int linewidth = 0;
         int lastline = 0;
         int start = 0;
+        int readspeed; //char per miniute
         int inlineid = 0; //行内标记
         int end = 0;
         int step = 0;
@@ -31,7 +32,12 @@ namespace frmnet
 
         private void Display_Load(object sender, EventArgs e)
         {
-            this.Text = Program.flieseled + Program.readfontsize + Program.readbite + Program.readmode;
+           //读取配置
+
+
+            //设置配置生效
+
+
             font = new Font("Arial", Program.readfontsize);
             string text = System.IO.File.ReadAllText(Program.flieseled, System.Text.Encoding.Default);
             string temp="";
@@ -49,6 +55,29 @@ namespace frmnet
             totaline = richTextBox1.GetLineFromCharIndex(richTextBox1.Text.Length);
             richTextBox1.Select(0, 0);
             linewidth = richTextBox1.Text.Length / totaline;
+            //computer reading speed
+            switch (Program.readmode)
+            {
+                case 3:
+                    readspeed = (linewidth / 3) * (60000 / Program.readbite);
+                    this.Text = Program.flieseled + " " + Program.readfontsize + " " + Program.readbite + " " + Program.readmode + " " + readspeed + "c/min";
+                    break;
+                case 5:
+                    readspeed = (linewidth / 2) * (60000 / Program.readbite);
+                    this.Text = Program.flieseled + " " + Program.readfontsize + " " + Program.readbite + " " + Program.readmode + " " + readspeed + "c/min";
+                    break;
+                case 10:
+                    readspeed = (linewidth ) * (60000 / Program.readbite);
+                    this.Text = Program.flieseled + " " + Program.readfontsize + " " + Program.readbite + " " + Program.readmode + " " + readspeed + "c/min";
+                    break;
+                case 20:
+                    readspeed = (linewidth *2) * (60000 / Program.readbite);
+                    this.Text = Program.flieseled + " " + Program.readfontsize + " " + Program.readbite + " " + Program.readmode+" "+readspeed+"c/min";
+                    break;
+                default:
+                    break;
+            }
+
             System.Console.WriteLine(richTextBox1.Text.Length);
             System.Console.WriteLine(richTextBox1.GetFirstCharIndexFromLine(totaline));
             

@@ -22,5 +22,101 @@ namespace banma.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("White")]
+        public global::System.Drawing.Color forecolor {
+            get {
+                return ((global::System.Drawing.Color)(this["forecolor"]));
+            }
+            set {
+                this["forecolor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Black")]
+        public global::System.Drawing.Color backcolor {
+            get {
+                return ((global::System.Drawing.Color)(this["backcolor"]));
+            }
+            set {
+                this["backcolor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Black")]
+        public global::System.Drawing.Color selforecolor {
+            get {
+                return ((global::System.Drawing.Color)(this["selforecolor"]));
+            }
+            set {
+                this["selforecolor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("192, 192, 255")]
+        public global::System.Drawing.Color selbackcolor {
+            get {
+                return ((global::System.Drawing.Color)(this["selbackcolor"]));
+            }
+            set {
+                this["selbackcolor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1000")]
+        public int readbite {
+            get {
+                return ((int)(this["readbite"]));
+            }
+            set {
+                this["readbite"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public int readmode {
+            get {
+                return ((int)(this["readmode"]));
+            }
+            set {
+                this["readmode"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("15")]
+        public int readfontsize {
+            get {
+                return ((int)(this["readfontsize"]));
+            }
+            set {
+                this["readfontsize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string selfilename {
+            get {
+                return ((string)(this["selfilename"]));
+            }
+            set {
+                this["selfilename"] = value;
+            }
+        }
     }
 }

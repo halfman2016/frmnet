@@ -2,18 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="banma.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="forecolor" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">Red</Value>
-    </Setting>
-    <Setting Name="backcolor" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">Gainsboro</Value>
-    </Setting>
-    <Setting Name="selforecolor" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">Black</Value>
-    </Setting>
-    <Setting Name="selbackcolor" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">128, 128, 255</Value>
-    </Setting>
     <Setting Name="readbite" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">1000</Value>
     </Setting>
@@ -21,10 +9,13 @@
       <Value Profile="(Default)">10</Value>
     </Setting>
     <Setting Name="readfontsize" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">15</Value>
+      <Value Profile="(Default)">28</Value>
     </Setting>
     <Setting Name="selfilename" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="sizecustime" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">40</Value>
     </Setting>
   </Settings>
 </SettingsFile>

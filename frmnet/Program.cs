@@ -10,14 +10,11 @@ namespace frmnet
         /// </summary>
         /// 
 
-        public static int readbite=666;
-        public static int readmode=10;
-        public static int readfontsize=15;
+        public static int readbite;
+        public static int readmode;
+        public static int readfontsize;
         public static string flieseled;
-        public static System.Drawing.Color forcecolor;
-        public static System.Drawing.Color backcolor;
-        public static System.Drawing.Color selforcecolor;
-        public static System.Drawing.Color selbackcolor;
+        public static int sizecustim;
 
 
 

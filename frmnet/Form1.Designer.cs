@@ -48,23 +48,18 @@
             this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.radioButton11 = new System.Windows.Forms.RadioButton();
             this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.radioButton13 = new System.Windows.Forms.RadioButton();
             this.sampletxt = new System.Windows.Forms.RichTextBox();
-            this.btnbackcol = new System.Windows.Forms.Button();
-            this.btnforecol = new System.Windows.Forms.Button();
-            this.btnselback = new System.Windows.Forms.Button();
-            this.btnselfore = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(672, 17);
+            this.button1.Location = new System.Drawing.Point(707, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(81, 23);
             this.button1.TabIndex = 0;
@@ -74,7 +69,7 @@
             // 
             // btndis
             // 
-            this.btndis.Location = new System.Drawing.Point(672, 374);
+            this.btndis.Location = new System.Drawing.Point(699, 326);
             this.btndis.Name = "btndis";
             this.btndis.Size = new System.Drawing.Size(89, 39);
             this.btndis.TabIndex = 1;
@@ -105,7 +100,7 @@
             this.groupBox1.Controls.Add(this.radioButton3);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(478, 104);
+            this.groupBox1.Location = new System.Drawing.Point(478, 77);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(201, 202);
             this.groupBox1.TabIndex = 4;
@@ -166,13 +161,12 @@
             this.groupBox2.Controls.Add(this.radioButton6);
             this.groupBox2.Controls.Add(this.radioButton7);
             this.groupBox2.Controls.Add(this.radioButton8);
-            this.groupBox2.Location = new System.Drawing.Point(258, 104);
+            this.groupBox2.Location = new System.Drawing.Point(258, 77);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(201, 202);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "阅读节奏";
-            this.groupBox2.Enter += new System.EventHandler(this.GroupBox2_Enter);
             // 
             // radioButton5
             // 
@@ -228,7 +222,8 @@
             this.groupBox3.Controls.Add(this.radioButton10);
             this.groupBox3.Controls.Add(this.radioButton11);
             this.groupBox3.Controls.Add(this.radioButton12);
-            this.groupBox3.Location = new System.Drawing.Point(33, 104);
+            this.groupBox3.Controls.Add(this.radioButton13);
+            this.groupBox3.Location = new System.Drawing.Point(33, 77);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(201, 202);
             this.groupBox3.TabIndex = 5;
@@ -283,119 +278,51 @@
             this.radioButton12.UseVisualStyleBackColor = true;
             this.radioButton12.CheckedChanged += new System.EventHandler(this.RadioButton12_CheckedChanged);
             // 
+            // radioButton13
+            // 
+            this.radioButton13.AutoSize = true;
+            this.radioButton13.Location = new System.Drawing.Point(21, 135);
+            this.radioButton13.Name = "radioButton13";
+            this.radioButton13.Size = new System.Drawing.Size(83, 16);
+            this.radioButton13.TabIndex = 4;
+            this.radioButton13.TabStop = true;
+            this.radioButton13.Text = "自定义大小";
+            this.radioButton13.UseVisualStyleBackColor = true;
+            this.radioButton13.CheckedChanged += new System.EventHandler(this.RadioButton12_CheckedChanged);
+            // 
             // sampletxt
             // 
             this.sampletxt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.sampletxt.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.sampletxt.BackColor = System.Drawing.Color.White;
             this.sampletxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sampletxt.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.sampletxt.Location = new System.Drawing.Point(33, 326);
+            this.sampletxt.Location = new System.Drawing.Point(33, 285);
             this.sampletxt.Multiline = false;
             this.sampletxt.Name = "sampletxt";
             this.sampletxt.ReadOnly = true;
-            this.sampletxt.Size = new System.Drawing.Size(338, 87);
+            this.sampletxt.Size = new System.Drawing.Size(646, 97);
             this.sampletxt.TabIndex = 0;
             this.sampletxt.TabStop = false;
-            this.sampletxt.Text = "文字样例预览";
+            this.sampletxt.Text = "班马书院文字预览";
+            this.sampletxt.TextChanged += new System.EventHandler(this.Sampletxt_TextChanged);
             // 
-            // btnbackcol
+            // trackBar1
             // 
-            this.btnbackcol.BackColor = System.Drawing.Color.White;
-            this.btnbackcol.FlatAppearance.BorderSize = 0;
-            this.btnbackcol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnbackcol.Location = new System.Drawing.Point(390, 330);
-            this.btnbackcol.Name = "btnbackcol";
-            this.btnbackcol.Size = new System.Drawing.Size(26, 26);
-            this.btnbackcol.TabIndex = 7;
-            this.btnbackcol.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnbackcol.UseVisualStyleBackColor = false;
-            // 
-            // btnforecol
-            // 
-            this.btnforecol.BackColor = System.Drawing.Color.Black;
-            this.btnforecol.FlatAppearance.BorderSize = 0;
-            this.btnforecol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnforecol.Location = new System.Drawing.Point(433, 330);
-            this.btnforecol.Name = "btnforecol";
-            this.btnforecol.Size = new System.Drawing.Size(26, 26);
-            this.btnforecol.TabIndex = 8;
-            this.btnforecol.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnforecol.UseVisualStyleBackColor = false;
-            // 
-            // btnselback
-            // 
-            this.btnselback.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnselback.FlatAppearance.BorderSize = 0;
-            this.btnselback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnselback.Location = new System.Drawing.Point(390, 374);
-            this.btnselback.Name = "btnselback";
-            this.btnselback.Size = new System.Drawing.Size(26, 26);
-            this.btnselback.TabIndex = 9;
-            this.btnselback.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnselback.UseVisualStyleBackColor = false;
-            // 
-            // btnselfore
-            // 
-            this.btnselfore.BackColor = System.Drawing.SystemColors.ControlText;
-            this.btnselfore.FlatAppearance.BorderSize = 0;
-            this.btnselfore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnselfore.Location = new System.Drawing.Point(434, 374);
-            this.btnselfore.Name = "btnselfore";
-            this.btnselfore.Size = new System.Drawing.Size(26, 26);
-            this.btnselfore.TabIndex = 10;
-            this.btnselfore.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnselfore.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(388, 359);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 12);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "背景";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(432, 359);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 12);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "前景";
-            this.label3.Click += new System.EventHandler(this.Label3_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(377, 403);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 12);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "突出背景";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(431, 403);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 12);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "突出前景";
+            this.trackBar1.Location = new System.Drawing.Point(33, 393);
+            this.trackBar1.Maximum = 90;
+            this.trackBar1.Minimum = 8;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(664, 45);
+            this.trackBar1.TabIndex = 5;
+            this.trackBar1.Value = 8;
+            this.trackBar1.Visible = false;
+            this.trackBar1.Scroll += new System.EventHandler(this.TrackBar1_Scroll);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnselfore);
-            this.Controls.Add(this.btnselback);
-            this.Controls.Add(this.btnforecol);
-            this.Controls.Add(this.btnbackcol);
+            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.sampletxt);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -410,13 +337,13 @@
             this.Text = "班马学习工具";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -444,14 +371,8 @@
         private System.Windows.Forms.RadioButton radioButton11;
         private System.Windows.Forms.RadioButton radioButton12;
         private System.Windows.Forms.RichTextBox sampletxt;
-        private System.Windows.Forms.Button btnbackcol;
-        private System.Windows.Forms.Button btnforecol;
-        private System.Windows.Forms.Button btnselback;
-        private System.Windows.Forms.Button btnselfore;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RadioButton radioButton13;
+        private System.Windows.Forms.TrackBar trackBar1;
     }
 }
 

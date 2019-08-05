@@ -25,54 +25,6 @@ namespace banma.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Red")]
-        public global::System.Drawing.Color forecolor {
-            get {
-                return ((global::System.Drawing.Color)(this["forecolor"]));
-            }
-            set {
-                this["forecolor"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Gainsboro")]
-        public global::System.Drawing.Color backcolor {
-            get {
-                return ((global::System.Drawing.Color)(this["backcolor"]));
-            }
-            set {
-                this["backcolor"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Black")]
-        public global::System.Drawing.Color selforecolor {
-            get {
-                return ((global::System.Drawing.Color)(this["selforecolor"]));
-            }
-            set {
-                this["selforecolor"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("128, 128, 255")]
-        public global::System.Drawing.Color selbackcolor {
-            get {
-                return ((global::System.Drawing.Color)(this["selbackcolor"]));
-            }
-            set {
-                this["selbackcolor"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1000")]
         public int readbite {
             get {
@@ -97,7 +49,7 @@ namespace banma.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("15")]
+        [global::System.Configuration.DefaultSettingValueAttribute("28")]
         public int readfontsize {
             get {
                 return ((int)(this["readfontsize"]));
@@ -116,6 +68,18 @@ namespace banma.Properties {
             }
             set {
                 this["selfilename"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("40")]
+        public int sizecustime {
+            get {
+                return ((int)(this["sizecustime"]));
+            }
+            set {
+                this["sizecustime"] = value;
             }
         }
     }

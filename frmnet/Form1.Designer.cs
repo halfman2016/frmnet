@@ -52,11 +52,11 @@
             this.sampletxt = new System.Windows.Forms.RichTextBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.widthbox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.heightbox = new System.Windows.Forms.TextBox();
             this.isA4check = new System.Windows.Forms.CheckBox();
+            this.heightbox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.widthbox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -66,28 +66,37 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(707, 12);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.Location = new System.Drawing.Point(668, 33);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(81, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "选择文件";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // btndis
             // 
-            this.btndis.Location = new System.Drawing.Point(699, 326);
+            this.btndis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btndis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btndis.Font = new System.Drawing.Font("宋体", 19F);
+            this.btndis.ForeColor = System.Drawing.Color.White;
+            this.btndis.Location = new System.Drawing.Point(635, 308);
             this.btndis.Name = "btndis";
-            this.btndis.Size = new System.Drawing.Size(89, 39);
+            this.btndis.Size = new System.Drawing.Size(114, 57);
             this.btndis.TabIndex = 1;
             this.btndis.Text = "阅读";
-            this.btndis.UseVisualStyleBackColor = true;
+            this.btndis.UseVisualStyleBackColor = false;
             this.btndis.Click += new System.EventHandler(this.Button2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 22);
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(58, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 12);
             this.label1.TabIndex = 2;
@@ -95,21 +104,23 @@
             // 
             // fileseled
             // 
-            this.fileseled.Location = new System.Drawing.Point(142, 19);
+            this.fileseled.BackColor = System.Drawing.Color.White;
+            this.fileseled.Location = new System.Drawing.Point(160, 35);
             this.fileseled.Name = "fileseled";
             this.fileseled.ReadOnly = true;
-            this.fileseled.Size = new System.Drawing.Size(439, 21);
+            this.fileseled.Size = new System.Drawing.Size(467, 21);
             this.fileseled.TabIndex = 3;
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.radioButton4);
             this.groupBox1.Controls.Add(this.radioButton3);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(478, 77);
+            this.groupBox1.Location = new System.Drawing.Point(433, 93);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(201, 202);
+            this.groupBox1.Size = new System.Drawing.Size(156, 190);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "阅读方式";
@@ -164,13 +175,14 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.White;
             this.groupBox2.Controls.Add(this.radioButton5);
             this.groupBox2.Controls.Add(this.radioButton6);
             this.groupBox2.Controls.Add(this.radioButton7);
             this.groupBox2.Controls.Add(this.radioButton8);
-            this.groupBox2.Location = new System.Drawing.Point(258, 77);
+            this.groupBox2.Location = new System.Drawing.Point(240, 93);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(201, 202);
+            this.groupBox2.Size = new System.Drawing.Size(156, 190);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "阅读节奏";
@@ -225,14 +237,15 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.White;
             this.groupBox3.Controls.Add(this.radioButton9);
             this.groupBox3.Controls.Add(this.radioButton10);
             this.groupBox3.Controls.Add(this.radioButton11);
             this.groupBox3.Controls.Add(this.radioButton12);
             this.groupBox3.Controls.Add(this.radioButton13);
-            this.groupBox3.Location = new System.Drawing.Point(33, 77);
+            this.groupBox3.Location = new System.Drawing.Point(51, 93);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(201, 202);
+            this.groupBox3.Size = new System.Drawing.Size(156, 190);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "字体大小";
@@ -302,11 +315,11 @@
             this.sampletxt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.sampletxt.BackColor = System.Drawing.Color.White;
             this.sampletxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sampletxt.Location = new System.Drawing.Point(33, 285);
+            this.sampletxt.Location = new System.Drawing.Point(48, 299);
             this.sampletxt.Multiline = false;
             this.sampletxt.Name = "sampletxt";
             this.sampletxt.ReadOnly = true;
-            this.sampletxt.Size = new System.Drawing.Size(646, 97);
+            this.sampletxt.Size = new System.Drawing.Size(576, 97);
             this.sampletxt.TabIndex = 0;
             this.sampletxt.TabStop = false;
             this.sampletxt.Text = "班马书院文字预览";
@@ -314,11 +327,12 @@
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(33, 393);
+            this.trackBar1.BackColor = System.Drawing.Color.White;
+            this.trackBar1.Location = new System.Drawing.Point(49, 392);
             this.trackBar1.Maximum = 90;
             this.trackBar1.Minimum = 8;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(664, 45);
+            this.trackBar1.Size = new System.Drawing.Size(578, 45);
             this.trackBar1.TabIndex = 5;
             this.trackBar1.Value = 8;
             this.trackBar1.Visible = false;
@@ -326,56 +340,18 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.BackColor = System.Drawing.Color.White;
             this.groupBox4.Controls.Add(this.isA4check);
             this.groupBox4.Controls.Add(this.heightbox);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.widthbox);
             this.groupBox4.Controls.Add(this.label2);
-            this.groupBox4.Location = new System.Drawing.Point(685, 77);
+            this.groupBox4.Location = new System.Drawing.Point(624, 93);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(114, 151);
+            this.groupBox4.Size = new System.Drawing.Size(116, 190);
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "屏幕大小_像素";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "屏幕宽：";
-            // 
-            // widthbox
-            // 
-            this.widthbox.Location = new System.Drawing.Point(9, 37);
-            this.widthbox.Name = "widthbox";
-            this.widthbox.ReadOnly = true;
-            this.widthbox.Size = new System.Drawing.Size(100, 21);
-            this.widthbox.TabIndex = 1;
-            this.widthbox.Text = "0";
-            this.widthbox.TextChanged += new System.EventHandler(this.Widthbox_TextChanged);
-            this.widthbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Widthbox_KeyPress);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 65);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 12);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "屏幕高：";
-            // 
-            // heightbox
-            // 
-            this.heightbox.Location = new System.Drawing.Point(9, 81);
-            this.heightbox.Name = "heightbox";
-            this.heightbox.Size = new System.Drawing.Size(100, 21);
-            this.heightbox.TabIndex = 3;
-            this.heightbox.Text = "0";
-            this.heightbox.TextChanged += new System.EventHandler(this.Heightbox_TextChanged);
-            this.heightbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Heightbox_KeyPress);
             // 
             // isA4check
             // 
@@ -388,11 +364,52 @@
             this.isA4check.UseVisualStyleBackColor = true;
             this.isA4check.CheckedChanged += new System.EventHandler(this.IsA4check_CheckedChanged);
             // 
+            // heightbox
+            // 
+            this.heightbox.Location = new System.Drawing.Point(9, 81);
+            this.heightbox.Name = "heightbox";
+            this.heightbox.Size = new System.Drawing.Size(100, 21);
+            this.heightbox.TabIndex = 3;
+            this.heightbox.Text = "0";
+            this.heightbox.TextChanged += new System.EventHandler(this.Heightbox_TextChanged);
+            this.heightbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Heightbox_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 65);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "屏幕高：";
+            // 
+            // widthbox
+            // 
+            this.widthbox.Location = new System.Drawing.Point(9, 37);
+            this.widthbox.Name = "widthbox";
+            this.widthbox.ReadOnly = true;
+            this.widthbox.Size = new System.Drawing.Size(100, 21);
+            this.widthbox.TabIndex = 1;
+            this.widthbox.Text = "0";
+            this.widthbox.TextChanged += new System.EventHandler(this.Widthbox_TextChanged);
+            this.widthbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Widthbox_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "屏幕宽：";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::banma.Properties.Resources.formback1;
+            this.ClientSize = new System.Drawing.Size(794, 471);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.sampletxt);
@@ -403,6 +420,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btndis);
             this.Controls.Add(this.button1);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

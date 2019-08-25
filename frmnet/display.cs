@@ -27,6 +27,11 @@ namespace frmnet
         public display()
         {
             InitializeComponent();
+            this.Height=Program.windowheight;
+            this.Width = Program.windowwidth;
+            int hh = this.ClientSize.Height;
+            richTextBox1.Height = hh;
+            richTextBox1.Width = this.ClientSize.Width;
         }
 
         private void Display_Load(object sender, EventArgs e)
@@ -47,10 +52,7 @@ namespace frmnet
                 
             }
             richTextBox1.Font = font;
-           
             richTextBox1.Text = temp;
-         
-           
             totaline = richTextBox1.GetLineFromCharIndex(richTextBox1.Text.Length);
             richTextBox1.Select(0, 0);
             linewidth = richTextBox1.Text.Length / totaline;

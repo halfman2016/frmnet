@@ -51,10 +51,17 @@
             this.radioButton13 = new System.Windows.Forms.RadioButton();
             this.sampletxt = new System.Windows.Forms.RichTextBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.widthbox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.heightbox = new System.Windows.Forms.TextBox();
+            this.isA4check = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -317,11 +324,76 @@
             this.trackBar1.Visible = false;
             this.trackBar1.Scroll += new System.EventHandler(this.TrackBar1_Scroll);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.isA4check);
+            this.groupBox4.Controls.Add(this.heightbox);
+            this.groupBox4.Controls.Add(this.label3);
+            this.groupBox4.Controls.Add(this.widthbox);
+            this.groupBox4.Controls.Add(this.label2);
+            this.groupBox4.Location = new System.Drawing.Point(685, 77);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(114, 151);
+            this.groupBox4.TabIndex = 6;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "屏幕大小_像素";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "屏幕宽：";
+            // 
+            // widthbox
+            // 
+            this.widthbox.Location = new System.Drawing.Point(9, 37);
+            this.widthbox.Name = "widthbox";
+            this.widthbox.ReadOnly = true;
+            this.widthbox.Size = new System.Drawing.Size(100, 21);
+            this.widthbox.TabIndex = 1;
+            this.widthbox.Text = "0";
+            this.widthbox.TextChanged += new System.EventHandler(this.Widthbox_TextChanged);
+            this.widthbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Widthbox_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 65);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "屏幕高：";
+            // 
+            // heightbox
+            // 
+            this.heightbox.Location = new System.Drawing.Point(9, 81);
+            this.heightbox.Name = "heightbox";
+            this.heightbox.Size = new System.Drawing.Size(100, 21);
+            this.heightbox.TabIndex = 3;
+            this.heightbox.Text = "0";
+            this.heightbox.TextChanged += new System.EventHandler(this.Heightbox_TextChanged);
+            this.heightbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Heightbox_KeyPress);
+            // 
+            // isA4check
+            // 
+            this.isA4check.AutoSize = true;
+            this.isA4check.Location = new System.Drawing.Point(9, 113);
+            this.isA4check.Name = "isA4check";
+            this.isA4check.Size = new System.Drawing.Size(84, 16);
+            this.isA4check.TabIndex = 4;
+            this.isA4check.Text = "保持A4比例";
+            this.isA4check.UseVisualStyleBackColor = true;
+            this.isA4check.CheckedChanged += new System.EventHandler(this.IsA4check_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.sampletxt);
             this.Controls.Add(this.groupBox3);
@@ -344,6 +416,8 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -373,6 +447,12 @@
         private System.Windows.Forms.RichTextBox sampletxt;
         private System.Windows.Forms.RadioButton radioButton13;
         private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox heightbox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox widthbox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox isA4check;
     }
 }
 

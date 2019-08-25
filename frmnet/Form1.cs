@@ -8,6 +8,8 @@ namespace frmnet
     public partial class Form1 : Form
     {
 
+        //height /width  297/210
+
 
         public Form1()
         {
@@ -22,7 +24,30 @@ namespace frmnet
             Program.readmode = Settings.Default.readmode;
             Program.readfontsize = Settings.Default.readfontsize;
             Program.sizecustim = Settings.Default.sizecustime;
+            Program.windowheight = Settings.Default.windowheight;
+            Program.windowwidth = Settings.Default.windowwidth;
+            Program.isA4 = Settings.Default.isA4;
+            isA4check.Checked = Program.isA4;
             trackBar1.Value = Program.sizecustim;
+            heightbox.Text = Program.windowheight.ToString();
+            if (Program.isA4 == true)
+            {
+                //保持比例
+
+                isA4check.Checked = Program.isA4;
+                widthbox.ReadOnly = true;
+                widthbox.Text = ((Program.windowheight * 210) / 297).ToString();
+
+            }
+            else
+            {
+                //不保持
+                isA4check.Checked = Program.isA4;
+                widthbox.ReadOnly = false;
+                widthbox.Text = Program.windowwidth.ToString();
+
+            }
+           
             radioButton13.Text = "自定义大小：（" + trackBar1.Value + "）";
 
             System.Console.WriteLine("first load :" + Program.readfontsize);
@@ -106,6 +131,8 @@ namespace frmnet
             display dis = new display();
             Hide();
             dis.Show();
+                Settings.Default.windowwidth = Program.windowwidth;
+                Settings.Default.windowheight = Program.windowheight;
                 Settings.Default.Save();
 
             }
@@ -121,6 +148,9 @@ namespace frmnet
                     fileseled.Text = openFileDialog.FileName;
                     Program.flieseled = openFileDialog.FileName;
                     Settings.Default.selfilename = Program.flieseled;
+                    Settings.Default.windowwidth = Program.windowwidth;
+                    Settings.Default.windowheight = Program.windowheight;
+
                     Settings.Default.Save();
                 }
             }
@@ -128,6 +158,8 @@ namespace frmnet
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
+            Settings.Default.windowwidth = Program.windowwidth;
+            Settings.Default.windowheight = Program.windowheight;
             Settings.Default.Save();
             Application.Exit();
         }
@@ -209,6 +241,75 @@ namespace frmnet
             Settings.Default.readfontsize = Program.readfontsize;
             Settings.Default.sizecustime = Program.readfontsize;
             radioButton13.Text = "自定义大小：（" + trackBar1.Value + "）";
+
+        }
+
+        private void IsA4check_CheckedChanged(object sender, EventArgs e)
+        {
+            //保存现在的值
+
+            Program.isA4 = isA4check.Checked;
+            Settings.Default.isA4 = Program.isA4;
+            Settings.Default.Save();
+
+
+            if (Program.isA4 == true)
+            {
+                widthbox.ReadOnly = true;   //不能写
+                widthbox.Text = (int.Parse(heightbox.Text)*210/297).ToString();
+                Program.windowwidth = int.Parse(widthbox.Text);
+
+            }
+            else
+            {
+                widthbox.ReadOnly = false;
+                Program.windowwidth = int.Parse(widthbox.Text);
+
+            }
+
+           
+
+        }
+
+        private void Widthbox_TextChanged(object sender, EventArgs e)
+        {
+            if (widthbox.Text != "")
+            {
+                if (Program.isA4 == false)
+                {
+                    Program.windowwidth = int.Parse(widthbox.Text);
+
+                }
+                else
+
+                {
+                    Console.Out.WriteLine("no");
+
+                }
+            }
+        }
+
+        private void Heightbox_TextChanged(object sender, EventArgs e)
+        {
+            if (heightbox.Text != "")
+            {
+                if (Program.isA4 == true)
+                {
+                    Program.windowheight = int.Parse(heightbox.Text);
+                    Program.windowwidth = (Program.windowheight * 210) / 297;
+                    widthbox.Text = Program.windowwidth.ToString();
+                }
+            }
+            }
+
+        private void Heightbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void Widthbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
 
         }
     }

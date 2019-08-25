@@ -15,7 +15,9 @@ namespace frmnet
         public static int readfontsize;
         public static string flieseled;
         public static int sizecustim;
-
+        public static int windowheight;
+        public static int windowwidth;
+        public static bool isA4;
 
 
 

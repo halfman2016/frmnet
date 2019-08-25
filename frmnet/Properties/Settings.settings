@@ -17,5 +17,14 @@
     <Setting Name="sizecustime" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">40</Value>
     </Setting>
+    <Setting Name="windowheight" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">750</Value>
+    </Setting>
+    <Setting Name="windowwidth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">530</Value>
+    </Setting>
+    <Setting Name="isA4" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

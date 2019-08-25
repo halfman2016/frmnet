@@ -82,5 +82,41 @@ namespace banma.Properties {
                 this["sizecustime"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("750")]
+        public int windowheight {
+            get {
+                return ((int)(this["windowheight"]));
+            }
+            set {
+                this["windowheight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("530")]
+        public int windowwidth {
+            get {
+                return ((int)(this["windowwidth"]));
+            }
+            set {
+                this["windowwidth"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool isA4 {
+            get {
+                return ((bool)(this["isA4"]));
+            }
+            set {
+                this["isA4"] = value;
+            }
+        }
     }
 }
